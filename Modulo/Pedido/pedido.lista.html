@@ -1,0 +1,54 @@
+<div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            Pesquisar
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" ng-model="busca" laceholder="pesquisar por">
+                        <span class="input-group-btn">
+        				    <button class="btn btn-default" type="button">Ok</button>
+     					</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Valor Total
+            </th>
+            <th>
+            </th>
+            <th>
+            </th>
+        </tr>
+        <tr ng-repeat="pedido in pedidos|filter:busca">
+            <td>
+                {{pedido.codigo}}
+            </td>
+            <td>
+                {{pedido.data}}
+            </td>
+            <td>
+                {{pedido.valortotal}}
+            </td>
+            <td>
+                <button class="btn btn-primary btn-danger" ng-click="excluirpedido(pedido)"> Exluir</button>
+                <button class="btn btn-primary btn-success" ng-click="alterarpedido(pedido)"> Alterar</button>
+            </td>
+        </tr>
+    </table>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <button class="btn" ui-sref="pedidonovo" href="#">Cadastrar</button>
+        </div>
+
+    </div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Pedidos</h2>
+    <p>Faça seu Pedido!</p>
+    <form ng-submit="ProdutoCadastrar(produto)">
+        <div angucomplete-alt id="ex1" placeholder="Escolha um produto" selected-object="produtoSelecionado" local-data="produtos" search-fields="descricao" title-field="descricao" minlength="1" inputclass="form-control form-control-small" match-class="highlight"></div>
+
+        <button class="btn btn-danger" ng-click="cancelar()">Cancelar</button>
+        <button class="btn btn-success" type="submit">Salvar Produto </button>
+    </form>
+</div>
